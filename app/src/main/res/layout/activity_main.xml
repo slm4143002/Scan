@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="焦点输出结果" />
+        <EditText
+            android:id="@+id/focus_result"
+            android:textColor="#2356C6"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接口回调结果:"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/callback_result"
+            android:textColor="#2356C6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广播接收结果:"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/broadcast_result"
+            android:textColor="#2356C6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解码成功提示音"
+                android:textSize="18sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/decode_succeed_beep"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/press_scan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开扫描按键"
+                android:textSize="18sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/open_scan_key"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/scan_sound_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否开始扫描："
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/start_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始扫描"/>
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/stop_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="停止扫描"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描结果输出方式："
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/focus_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="焦点输出"/>
+
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/broadcast_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广播输出"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/hid_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模拟按键"/>
+
+    </LinearLayout>
+
+</ScrollView>
